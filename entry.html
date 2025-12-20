@@ -7,14 +7,18 @@
       content="width=device-width, initial-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Riddle Game</title>
+    <title>Riddle #1</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <main>
       <div>
-        <b>WORK IN PROGRESS /!\</b>
+        <p>Magic Number <i>(be careful, you only have one try)</i></p>
+        <input type="text" id="pwd" required maxlength="1" inputmode="numeric" pattern="\d*"/>
+        <button id="submit" onclick='submit(55, "riddle1", "Okay, maybe you do have more than one try");'>↵</button>
+        <script src="submit.js"></script>
+        <p id="validity"></p>
       </div>
     </main>
   </body>
