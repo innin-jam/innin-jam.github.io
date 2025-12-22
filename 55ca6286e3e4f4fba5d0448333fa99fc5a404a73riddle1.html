@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Riddle #1</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <p>01</p>
+        <fieldset>
+          <legend>
+            Which of the following draws a snowflake?
+          </legend>
+          <div class="code-option">
+            <input type="radio" name="riddle" id="choice1" />
+            <pre><code>a(0, 1)
+a(120, 1)
+a(240, 1)
+
+pendown()
+
+def a(dir, scale) {
+    forward(1 * scale)
+    a(dir - 30, scale * 0.5)
+    a(dir, scale * 0.5)
+    a(dir + 30, scale * 0.5)
+}
+
+penup()</code></pre>
+          </div>
+          <div class="code-option">
+            <input type="radio" name="riddle" id="choice2" />
+            <pre><code>a(0, 2)
+a(120, 2)
+a(240, 2)
+
+pendown()
+
+def a(dir, reps) {
+    if reps == 0 {
+        return
+    }
+    forward(1)
+    a(dir - 30, reps - 1)
+    a(dir, reps - 1)
+    a(dir + 30, reps - 1)
+}
+
+penup()</code></pre>
+          </div>
+          <div class="code-option">
+            <input type="radio" name="riddle" id="choice3" />
+            <pre><code>a(0, 1)
+a(120, 1)
+a(240, 1)
+
+pendown()
+
+def a(dir, scale) {
+    forward(scale)
+    if scale <= 0.25 {
+        return
+    }
+    a(dir - 30, scale * 0.5)
+    a(dir, scale * 0.5)
+    a(dir + 30, scale * 0.5)
+}
+
+penup()</code></pre>
+          </div>
+          <div class="code-option">
+            <input type="radio" name="riddle" id="choice4" />
+            <pre><code>a()
+
+pendown()
+
+def a() {
+    direction = 0
+    forward(1)
+    a()
+    forward(-1)
+    direction = 120
+    forward(1)
+    a()
+    forward(-1)
+    direction = 240
+    forward(1)
+    a()
+    forward(-1)
+}
+
+penup()</code></pre>
+          </div>
+          <button
+            id="submit"
+            onclick='codeSubmit("choice3", "b52791126f96a21a8ba4d511c6f25a1c1eb6dc9eriddle2");'
+          >
+            ↵
+          </button>
+          <script src="submit.js"></script>
+          <p id="validity"></p>
+        </fieldset>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,4 +1,16 @@
-div {
-  margin-bottom: 30px;
-  position: relative;
+.code-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.code-option input[type="radio"] {
+  margin-top: 16px; /* Align with first line of code */
+}
+
+.code-option pre {
+  margin: 8px;
+  padding: 8px;
+  width: 20rem;
+  background-color: #c0c0c0;
 }

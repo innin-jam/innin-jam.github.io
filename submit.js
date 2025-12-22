@@ -18,3 +18,14 @@ const generateHash = (string) => {
   }
   return hash;
 };
+
+function codeSubmit(element, link) {
+  let checked = document.getElementById("choice3").checked;
+  if (checked) {
+    document.getElementById("validity").innerHTML = "correct";
+    location.pathname = link;
+  }
+  else {
+    document.getElementById("validity").innerHTML = "incorrect";
+  }
+}
